@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #15A0FF, #224582);
+  }
+  .border-gradient {
+    border-image: linear-gradient(to right, #00c6ff, #0072ff) 1;
+    border-radius: 20px;
+  }
+}
+
+@keyframes bgColorChange {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.text-bg-animation {
+  background: linear-gradient(270deg, #15A0FF, #9A5031, #224582, rgb(178, 53, 157));
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bgColorChange 8s ease infinite;
+}
